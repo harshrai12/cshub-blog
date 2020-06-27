@@ -1,5 +1,6 @@
 .card {
   margin-bottom: 30px;
+  background-color: rgb(59, 59, 59);
 }
 ul.post-tags {
   padding: 0;
@@ -9,4 +10,8 @@ ul.post-tags {
   li {
     margin-right: 10px;
   }
+}
+
+.card-title{
+  color: rgb(255, 255, 255);
 }
