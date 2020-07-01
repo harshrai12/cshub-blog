@@ -1,42 +1,54 @@
-
-import React from 'react'
-import Link from 'gatsby-link'
-import Layout from '../components/layout'
+import React from "react"
+import Link from "gatsby-link"
+import Layout from "../components/layout"
 import { Card, CardTitle, CardText, CardSubtitle, CardBody } from "reactstrap"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
-export default function Template({ data }) {
-  const post = data.markdownRemark
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
+export const query = graphql`
+  query($slug: String!) {
+    contentfulCshub(slug: { eq: $slug }) {
+      title
+      author
+      date
+      body {
+        json
+      }
+    }
+  }
+`
+
+const SinglePost = ({ data }) => {
+  const options = {
+    renderNode: {
+      "embedded-asset-block": node => {
+        const alt = node.data.target.fields.title["en-US"]
+        const url = node.data.target.fields.file["en-US"].url
+        return <img alt={alt} src={url} className="important" />
+      },
+    },
+  }
   return (
-   <Layout>
-    <div>
-      <Link to="/">Go Back</Link>
-      <hr />
-      <h1>{post.frontmatter.title}</h1>
+    <Layout>
+      <h1>{data.contentfulCshub.title}</h1>
       <div className="blog-info">
-      <h4>
-        Posted by {post.frontmatter.author} on {post.frontmatter.date}
-      </h4>
+        <span>{data.contentfulCshub.date}</span> by{" "}
+        <span>{data.contentfulCshub.author}</span>
       </div>
+
       <Card>
-      <div className="blog-text">
-      <div dangerouslySetInnerHTML={{ __html: post.html }} /></div></Card>
-    </div>
-    
+        <CardBody className="blog-text">
+          <div>
+            {documentToReactComponents(data.contentfulCshub.body.json, options)}
+          </div>
+        </CardBody>
+      </Card>
+      <h2></h2>
+      <h2></h2>
     </Layout>
   )
 }
 
-export const postQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        path
-        title
-        author
-        date
-      }
-    }
-  }
-  `
+export default SinglePost

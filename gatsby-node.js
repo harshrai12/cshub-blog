@@ -1,41 +1,29 @@
-const path = require('path')
+const path = require("path")
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators
-
-  const postTemplate = path.resolve('src/templates/SinglePost.js')
-
-  return graphql(`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            html
-            id
-            frontmatter {
-              path
-              title
-              date
-              author
-            }
+module.exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const blogTemplate = path.resolve(`./src/templates/SinglePost.js`)
+  const res = await graphql(`
+  query {
+    allContentfulCshub {
+          edges {
+              node {
+                title
+                author
+                slug
+              }
           }
-        }
       }
-    }
-  `).then(res => {
-    if (res.errors) {
-      return Promise.reject(res.errors)
-    }
-
-    res.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: postTemplate,
-      })
+  }
+`);
+  res.data.allContentfulCshub.edges.forEach((edge) => {
+    createPage({
+        component: blogTemplate,
+        path: `/SinglePost/${edge.node.slug}`,
+        context: {
+          slug: edge.node.slug
+        }
     })
-  })
+})
 }
 
-  
-
- 

@@ -20,14 +20,13 @@ const IndexPage = () => (
           render={data => {
             return (
               <div>
-                {data.allMarkdownRemark.edges.map(({ node }) => (
+                {data.allContentfulCshub.edges.map(({ node }) => (
                   <Post
-                    title={node.frontmatter.title}
-                    path={node.frontmatter.path}
-                    author={node.frontmatter.author}
-                    body={node.excerpt}
-                    date={node.frontmatter.date}
-                    fluid={node.frontmatter.images.childImageSharp.fluid}
+                    title={node.title}
+                    path={node.slug}
+                    author={node.author}
+                    date={node.date}
+                    fluid={node.images.fluid}
                   />
                 ))}
               </div>
@@ -37,7 +36,7 @@ const IndexPage = () => (
       </Col>
       <Col md="4">
         <div>
-          <Sidebar/>
+          <Sidebar />
         </div>
       </Col>
     </Row>
@@ -46,24 +45,20 @@ const IndexPage = () => (
 
 const indexQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allContentfulCshub ( sort: { fields: date, order: DESC } ) {
       edges {
         node {
-          id
-          frontmatter {
+          title
+          slug
+          path
+          date
+          author
+          images {
             title
-            date
-            path
-            author
-            images {
-              childImageSharp {
-                fluid(maxWidth: 1000, maxHeight: 400) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+            fluid(maxWidth: 600, maxHeight:300) {
+              ...GatsbyContentfulFluid
             }
           }
-          excerpt
         }
       }
     }
