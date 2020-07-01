@@ -1,9 +1,9 @@
 import React from "react"
-import Link from "gatsby-link"
+
 import Layout from "../components/layout"
-import { Card, CardTitle, CardText, CardSubtitle, CardBody } from "reactstrap"
+import { Card,CardBody } from "reactstrap"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+
 
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
@@ -45,8 +45,6 @@ const SinglePost = ({ data }) => {
           </div>
         </CardBody>
       </Card>
-      <h2></h2>
-      <h2></h2>
     </Layout>
   )
 }

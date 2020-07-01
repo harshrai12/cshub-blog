@@ -9,7 +9,7 @@ const Post = ({ title, author, path, date,fluid}) => {
     <Card>
      <Img className="card-top" fluid={fluid}/>
       <CardBody>
-      <div className="dpborder"><img src={abhisar} className="dp"/></div>
+      <div className="dpborder"><img src={abhisar} className="dp" alt="dp" /></div>
         <CardTitle>{title}</CardTitle>
         
         

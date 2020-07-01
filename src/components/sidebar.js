@@ -6,7 +6,6 @@ import {
   Form,
   FormGroup,
   Input,
-  Button,
 } from "reactstrap"
 
 const Sidebar = () => {
