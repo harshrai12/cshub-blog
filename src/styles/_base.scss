@@ -2,10 +2,10 @@
   margin-top: 60px;
 }
 body {
-  background-color: rgb(0, 0, 0);;
+  background-color: rgb(0, 0, 0);
 }
 a {
-  color: #089800;;
+  color: #089800;
   &:hover {
     color: #00ff48;
     text-decoration: none;
@@ -38,6 +38,42 @@ ul {
   padding: 0;
 }
 
-.infos{
+.infos {
   color: rgb(87, 174, 0);
+}
+
+.hometext {
+  color: orange;
+}
+
+.particle-js {
+  
+  position: fixed;
+  background-repeat: repeat;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.front {
+  width: 80%;
+  margin-top: -8%;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.about-text {
+  color: azure;
+}
+
+.abouts-section {
+  margin-top: 10%;
+}
+
+@media (max-width: 600px){
+  .particle{
+    height:100%  }
 }

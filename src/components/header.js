@@ -9,7 +9,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-
 } from "reactstrap"
 
 const Header = props => {
@@ -19,35 +18,38 @@ const Header = props => {
 
   return (
     <div>
-     
       <Navbar color="Light" light expand="md">
-      <div className="container">
-        <NavbarBrand href="/">CsBlogs</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink>
-                {" "}
-                <Link to="/">Home</Link>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink>
-                <Link to="/about">About</Link>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink>
-                <Link to="/teams">Teams</Link>
-              </NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
+        <div className="container">
+          <NavbarBrand href="/">CsBlogs</NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink>
+                  {" "}
+                  <Link to="/">Blog</Link>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink>
+                  <Link to="/about">About</Link>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink>
+                  <Link to="/home">Home</Link>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink>
+                  <Link to="/teams">Teams</Link>
+                </NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
         </div>
       </Navbar>
     </div>
-
   )
 }
 
