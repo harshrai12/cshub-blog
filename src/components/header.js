@@ -27,7 +27,7 @@ const Header = props => {
               <NavItem>
                 <NavLink>
                   {" "}
-                  <Link to="/">Blog</Link>
+                  <Link to="/">Home</Link>
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -37,7 +37,7 @@ const Header = props => {
               </NavItem>
               <NavItem>
                 <NavLink>
-                  <Link to="/home">Home</Link>
+                  <Link to="/home">Blog</Link>
                 </NavLink>
               </NavItem>
               <NavItem>
