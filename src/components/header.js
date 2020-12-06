@@ -18,7 +18,7 @@ const Header = props => {
 
   return (
     <div>
-      <Navbar color="Light" light expand="md">
+      <Navbar color="Light" light expand="md" fixed="top">
         <div className="container">
           <NavbarBrand href="/">CsBlogs</NavbarBrand>
           <NavbarToggler onClick={toggle} />

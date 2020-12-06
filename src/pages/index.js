@@ -1,133 +1,35 @@
-
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Particles from "react-particles-js"
-import Img from "gatsby-image"
-import logo from "../images/CSCODERSHUB3.png"
+import Header from "../components/header"
 
-const Home = () => (
-  <Layout>
+import logo from "../images/CSCODERSHUB3.png"
+import BackgroundImage from "gatsby-background-image"
+import { graphql } from "gatsby"
+
+const Home = props => (
+  <div>
+    <Header />
     <SEO title="About" />
-    <div className="front">
+    <BackgroundImage
+      fluid={props.data.indexImage.childImageSharp.fluid}
+      className="background"
+    >
+      Test
+    </BackgroundImage>
+    {/** 
+ <div className="front">
       <img src={logo} className="front" alt="dp" />
+    </div> 
+**/}
+    <p class="line anim-typewriter">CSCODERSHUB</p>
+    <div className="text">
+      <p>Community of coders and hackers</p>
+      <a href="something" className="button1">
+        Connect to Discord
+      </a>
     </div>
-    <div className="particle-js">
-      <Particles
-        height="1200px"
-        width="100"
-        params={{
-          particles: {
-            number: {
-              value: 80,
-              density: {
-                enable: true,
-                value_area: 800,
-              },
-            },
-            color: {
-              value: "#ffffff",
-            },
-            shape: {
-              type: "circle",
-              stroke: {
-                width: 0,
-                color: "#000000",
-              },
-              polygon: {
-                nb_sides: 5,
-              },
-              image: {
-                src: "img/github.svg",
-                width: 100,
-                height: 100,
-              },
-            },
-            opacity: {
-              value: 0.5,
-              random: false,
-              anim: {
-                enable: false,
-                speed: 1,
-                opacity_min: 0.1,
-                sync: false,
-              },
-            },
-            size: {
-              value: 3,
-              random: true,
-              anim: {
-                enable: false,
-                speed: 40,
-                size_min: 0.1,
-                sync: false,
-              },
-            },
-            line_linked: {
-              enable: true,
-              distance: 150,
-              color: "#ffffff",
-              opacity: 0.4,
-              width: 1,
-            },
-            move: {
-              enable: true,
-              speed: 6,
-              direction: "none",
-              random: false,
-              straight: false,
-              out_mode: "out",
-              bounce: false,
-              attract: {
-                enable: false,
-                rotateX: 600,
-                rotateY: 1200,
-              },
-            },
-          },
-          interactivity: {
-            detect_on: "canvas",
-            events: {
-              onhover: {
-                enable: true,
-                mode: "repulse",
-              },
-              onclick: {
-                enable: true,
-                mode: "push",
-              },
-              resize: true,
-            },
-            modes: {
-              grab: {
-                distance: 400,
-                line_linked: {
-                  opacity: 1,
-                },
-              },
-              bubble: {
-                distance: 400,
-                size: 40,
-                duration: 2,
-                opacity: 8,
-                speed: 3,
-              },
-              repulse: {
-                distance: 200,
-                duration: 0.4,
-              },
-              push: {
-                particles_nb: 4,
-              },
-              remove: {
-                particles_nb: 2,
-              },
-            },
-          },
-          retina_detect: true,
-        }}
-      />
-    </div>
+
     <div className="abouts-section">
       <h1>About CSCODERSHUB</h1>
       <p className="about-text">
@@ -142,7 +44,19 @@ const Home = () => (
         Ipsum.
       </p>
     </div>
-  </Layout>
+  </div>
 )
 
 export default Home
+
+export const pageQuery = graphql`
+  query {
+    indexImage: file(relativePath: { eq: "bg.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
