@@ -12,12 +12,7 @@ const Home = props => (
   <div>
     <Header />
     <SEO title="About" />
-    <BackgroundImage
-      fluid={props.data.indexImage.childImageSharp.fluid}
-      className="background"
-    >
-      Test
-    </BackgroundImage>
+   
     {/** 
  <div className="front">
       <img src={logo} className="front" alt="dp" />
