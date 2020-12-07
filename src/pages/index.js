@@ -6,6 +6,7 @@ import Header from "../components/header"
 import logo from "../images/CSCODERSHUB3.png"
 import BackgroundImage from "gatsby-background-image"
 import { graphql } from "gatsby"
+import Team from "../components/teammember"
 
 const Home = props => (
   <div>
@@ -25,7 +26,7 @@ const Home = props => (
     <p class="line anim-typewriter">CSCODERSHUB</p>
     <div className="text">
       <p>Community of coders and hackers</p>
-      <a href="something" className="button1">
+      <a href= "https://discord.com/invite/K5K9Yaz" className="button1">
         Connect to Discord
       </a>
     </div>
@@ -43,6 +44,7 @@ const Home = props => (
         publishing software like Aldus PageMaker including versions of Lorem
         Ipsum.
       </p>
+      <Team/>
     </div>
   </div>
 )

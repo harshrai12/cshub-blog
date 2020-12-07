@@ -20,7 +20,7 @@ const Header = props => {
     <div>
       <Navbar color="Light" light expand="md" fixed="top">
         <div className="container">
-          <NavbarBrand href="/">CsBlogs</NavbarBrand>
+          <NavbarBrand href="/">CSCODERSHUB</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
