@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header"
+import discord from"../images/kisspng-discord-computer-icons-logo-online-chat-discord-5b2291673db518.4803332115289921032528.png"
 
 import logo from "../images/CSCODERSHUB3.png"
 import BackgroundImage from "gatsby-background-image"
@@ -22,7 +23,7 @@ const Home = props => (
     <div className="text">
       <p>Community of coders and hackers</p>
       <a href= "https://discord.com/invite/K5K9Yaz" className="button1">
-        Connect to Discord
+      <img src={discord} className="dlogo"/>Connect to Discord 
       </a>
     </div>
 
