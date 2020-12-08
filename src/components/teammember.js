@@ -32,9 +32,9 @@ function teammember() {
        <div className="about"> </div>
 
        <div className="social-links">
-           <a href="#"> <img src={linkedin} alt="" className="icon" /></a>
-           <a href="#"> <img src={twotter} alt="" className="icon"/></a>
-           <a href="#"> <img src={github} alt="" className="icon"/></a>
+           <a href="https://www.linkedin.com/in/imabhisarpandey/"> <img src={linkedin} alt="" className="icon" /></a>
+           <a href="https://www.twitter.com/imabhisarpandey/"> <img src={twotter} alt="" className="icon"/></a>
+           <a href="https://www.github.com/imabhisarpandey/"> <img src={github} alt="" className="icon"/></a>
           
        </div>
    </div>
@@ -42,14 +42,14 @@ function teammember() {
    <div className="sub-container">
        <div class="teams">
            <img src={adi} alt=""/>
-           <div className="name">Aditya</div>
+           <div className="name">Aditya chatterjee</div>
            <div className="desig"> Web Developer</div>
            <div className="about"> </div>
 
            <div className="social-links">
-               <a href="#"> <img src={linkedin} alt="" className="icon" /></a>
-               <a href="#"> <img src={twotter} alt="" className="icon"/></a>
-               <a href="#"> <img src={github} alt="" className="icon"/></a>
+               <a href="https://www.linkedin.com/in/aditya-c-840480140"> <img src={linkedin} alt="" className="icon" /></a>
+               <a href="https://twitter.com/X__amaterasu__X?s=08"> <img src={twotter} alt="" className="icon"/></a>
+               <a href="https://github.com/adi1506"> <img src={github} alt="" className="icon"/></a>
               
            </div>
        </div>
@@ -57,7 +57,7 @@ function teammember() {
        <div class="teams">
            <img src={harsh} alt=""/>
            <div className="name">Harsh Rai</div>
-           <div className="desig">Web developer</div>
+           <div className="desig">Web Developer</div>
          <div className="about"></div>
 
                <div className="social-links">
@@ -70,14 +70,14 @@ function teammember() {
 
        <div className="teams">
            <img src={mudit} alt=""/>
-           <div className="name">Mudit</div>
+           <div className="name">Mudit Bansal</div>
            <div className="desig">Ethical Hacker</div>
            <div className="about"></div>
 
                <div className="social-links">
-               <a href="#"> <img src={linkedin} alt="" className="icon" /></a>
-               <a href="#"> <img src={twotter} alt="" className="icon"/></a>
-               <a href="#"> <img src={github} alt="" className="icon"/></a>
+               <a href="https://www.linkedin.com/in/muditbansal"> <img src={linkedin} alt="" className="icon" /></a>
+               <a href="https://www.twitter.com/muditisrocking/"> <img src={twotter} alt="" className="icon"/></a>
+               <a href="https://www.github.com/defalt007/"> <img src={github} alt="" className="icon"/></a>
               
            </div>
        </div>
@@ -86,20 +86,20 @@ function teammember() {
        <div class="teams">
            <img src={arth} alt=""/>
            <div className="name">Arth Nangia</div>
-           <div className="desig">Developer</div>
+           <div className="desig">Creative Director</div>
            <div className="about"> </div>
 
            <div className="social-links">
-               <a href="#"> <img src={linkedin} alt="" className="icon" /></a>
-               <a href="#"> <img src={twotter} alt="" className="icon"/></a>
-               <a href="#"> <img src={github} alt="" className="icon"/></a>
+               <a href="https://www.linkedin.com/in/arth-nangia/"> <img src={linkedin} alt="" className="icon" /></a>
+               <a href="https://www.twitter.com/travuersa25/"> <img src={twotter} alt="" className="icon"/></a>
+               <a href=""> <img src={github} alt="" className="icon"/></a>
               
            </div>
        </div>
 
        <div class="teams">
            <img src={Devasnh} alt=""/>
-           <div className="name">Devasnh</div>
+           <div className="name">Devansh Nigam</div>
            <div className="desig">Web Developer</div>
          <div className="about"></div>
 
@@ -113,14 +113,14 @@ function teammember() {
 
        <div className="teams">
            <img src={amritya} alt=""/>
-           <div className="name">Amritya</div>
+           <div className="name">Amritya Vaibhav Dembla</div>
            <div className="desig">Security Analysist</div>
            <div className="about"> </div>
 
                <div className="social-links">
-               <a href="#"> <img src={linkedin} alt="" className="icon" /></a>
+               <a href="https://www.linkedin.com/in/amritya-vaibhav-dembla/"> <img src={linkedin} alt="" className="icon" /></a>
                <a href="#"> <img src={twotter} alt="" className="icon"/></a>
-               <a href="#"> <img src={github} alt="" className="icon"/></a>
+               <a href="https://www.github.com/Dboidembla/"> <img src={github} alt="" className="icon"/></a>
               
            </div>
        </div>
