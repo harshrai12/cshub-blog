@@ -32,17 +32,17 @@ const Header = props => {
               </NavItem>
               <NavItem>
                 <NavLink>
-                  <Link to="/about">About</Link>
+                  <Link to="https://cscodershub.netlify.app/about">About</Link>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink>
-                  <Link to="/home">Home</Link>
+                  <Link to="https://cscodershub.netlify.app/">Home</Link>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink>
-                  <Link to="/teams">Teams</Link>
+                  <Link to="https://cscodershub.netlify.app/teams">Teams</Link>
                 </NavLink>
               </NavItem>
             </Nav>
